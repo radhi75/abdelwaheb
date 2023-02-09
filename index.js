@@ -5,7 +5,7 @@ const path = require("path");
 const cookieParser = require('cookie-parser');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 app.use(cookieParser())
-app.use(express.static(path.resolve(__dirname, './Client/dist')));
+app.use(express.static(path.resolve(__dirname, './client/build')));
 
 app.use(
   "/",
@@ -18,7 +18,7 @@ app.use(
 
 app.get('*', (req, res) => {
  
-  res.send(path.resolve(__dirname, './Client/build', 'index.html'));
+  res.send(path.resolve(__dirname, './client/build', 'index.html'));
 });
 app.listen(port,() => {
   console.log(` Backend server is running!  http://localhost:${port}`);
