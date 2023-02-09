@@ -18,7 +18,7 @@ app.use(
 
 app.get('*', (req, res) => {
  
-  res.send(path.resolve(__dirname, './client/build', 'index.html'));
+  res.send("hello");
 });
 app.listen(port,() => {
   console.log(` Backend server is running!  http://localhost:${port}`);
