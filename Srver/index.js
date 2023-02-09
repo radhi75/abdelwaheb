@@ -15,27 +15,29 @@ const {PosteRouter}=require("./Router/PosteRouter");
 const {UserRouter}=require("./Router/UserRouter");
 
 
-const config = {
-  rtmp: {
-    port: 1935,
-    chunk_size: 60000,
-    gop_cache: true,
-    ping: 30,
-    ping_timeout: 60
-  },
-  http: {
-    port: 8000,
-    allow_origin: '*'
-  }
-};
-const nms = new NodeMediaServer(config);
-nms.run();
+// const config = {
+//   rtmp: {
+//     port: 1935,
+//     chunk_size: 60000,
+//     gop_cache: true,
+//     ping: 30,
+//     ping_timeout: 60
+//   },
+//   http: {
+//     port: 8000,
+//     allow_origin: '*'
+//   }
+// };
+// const nms = new NodeMediaServer(config);
+// nms.run();
 
-app.use(cors({
-  origin:'*', 
-  credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200
-}));
+app.use(
+  cors({
+    origin: "http://localhost:5173/",
+    credentials: true, //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+  })
+);
 
 app.use(express.json());
 app.use(cookieParser())
