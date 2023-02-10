@@ -4,9 +4,9 @@ const cookieParser = require('cookie-parser');
 require("dotenv").config();
 const cors = require('cors');
 
-// const {PosteRouter}=require("./Router/PosteRouter");
+const {PosteRouter}=require("./Router/PosteRouter");
 
-// const {UserRouter}=require("./Router/UserRouter");
+const {UserRouter}=require("./Router/UserRouter");
 app.use(
   cors({
     origin: "http://localhost:3000",
@@ -19,7 +19,7 @@ app.use(express.json())
 app.set("port", 5500);
 
 
-// app.use('/',PosteRouter)
-// app.use('/',UserRouter)
+app.use('/',PosteRouter)
+app.use('/',UserRouter)
 
 module.exports = app

@@ -6,16 +6,7 @@ const Page1 = () => {
     <div>
       <Home />
 
-      <header>
-        <span className="nav-list">
-          <nav>Home</nav>
-          <nav>Movies</nav>
-        </span>
-        <span className="nav-search">
-          <input type="text" placeholder="Search" id="search" />
-          <button className="button">Search</button>
-        </span>
-      </header>
+     heom
     </div>
   );
 };
